@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from datetime import datetime
-import plotly.express as px
+#import plotly.express as px
 
 # Page setup
 st.set_page_config(page_title="Eisenhower Matrix", layout="wide")
@@ -92,12 +92,12 @@ for row1, row2 in [["Do", "Decide"], ["Delegate", "Delete"]]:
         )
 
 # Analytics chart
-st.markdown("### 📊 Eisenhower Matrix Analytics")
-if not df.empty:
-    fig = px.histogram(df, x="Quadrant", color="Quadrant", title="Task Distribution by Quadrant",
-                       category_orders={"Quadrant": ["Do", "Decide", "Delegate", "Delete"]},
-                       color_discrete_map=colors)
-    fig.update_layout(showlegend=False, xaxis_title="Quadrant", yaxis_title="Number of Tasks")
-    st.plotly_chart(fig, use_container_width=True)
-else:
-    st.info("No data available to show analytics.")
+#st.markdown("### 📊 Eisenhower Matrix Analytics")
+#if not df.empty:
+#    fig = px.histogram(df, x="Quadrant", color="Quadrant", title="Task Distribution by Quadrant",
+#                       category_orders={"Quadrant": ["Do", "Decide", "Delegate", "Delete"]},
+#                       color_discrete_map=colors)
+#    fig.update_layout(showlegend=False, xaxis_title="Quadrant", yaxis_title="Number of Tasks")
+#    st.plotly_chart(fig, use_container_width=True)
+#else:
+#    st.info("No data available to show analytics.")"""
